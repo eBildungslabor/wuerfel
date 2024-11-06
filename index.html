@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zufallszahl</title>
+    <style>
+        /* Ganzseitiger Container */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 20vw; /* Schriftgröße noch größer für bessere Lesbarkeit */
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Dunklere, knallige Hintergrundfarben */
+        .bg-color-1 { background-color: #8B0000; } /* Dunkelrot */
+        .bg-color-2 { background-color: #FF4500; } /* Dunkelorange */
+        .bg-color-3 { background-color: #2E8B57; } /* Dunkelgrün */
+        .bg-color-4 { background-color: #4682B4; } /* Stahlblau */
+        .bg-color-5 { background-color: #6A5ACD; } /* Schieferblau */
+        .bg-color-6 { background-color: #8B008B; } /* Dunkellila */
+    </style>
+</head>
+<body>
+
+    <div id="random-number"></div>
+
+    <script>
+        // Generiere eine Zufallszahl zwischen 1 und 6
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        // Zufällige Hintergrundfarbe setzen
+        function setRandomBackgroundColor() {
+            const colorClass = `bg-color-${getRandomNumber()}`;
+            document.body.classList.add(colorClass);
+        }
+
+        // Zahl und Hintergrundfarbe beim Laden setzen
+        function initPage() {
+            document.getElementById('random-number').textContent = getRandomNumber();
+            setRandomBackgroundColor();
+        }
+
+        initPage();
+    </script>
+
+</body>
+</html>
