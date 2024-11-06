@@ -8,24 +8,38 @@
         /* Ganzseitiger Container */
         body, html {
             height: 100%;
+            width: 100%;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 20vw; /* Schriftgröße noch größer für bessere Lesbarkeit */
             color: white;
             text-align: center;
             overflow: hidden;
+            background-size: cover;
         }
 
-        /* Dunklere, knallige Hintergrundfarben */
+        /* Zufällige, dunklere knallige Hintergrundfarben */
         .bg-color-1 { background-color: #8B0000; } /* Dunkelrot */
         .bg-color-2 { background-color: #FF4500; } /* Dunkelorange */
         .bg-color-3 { background-color: #2E8B57; } /* Dunkelgrün */
         .bg-color-4 { background-color: #4682B4; } /* Stahlblau */
         .bg-color-5 { background-color: #6A5ACD; } /* Schieferblau */
         .bg-color-6 { background-color: #8B008B; } /* Dunkellila */
+        
+        /* Flexibles Styling für die Zahl */
+        #random-number {
+            font-size: 80vmin; /* Flexibel in Relation zur kleineren Bildschirmseite */
+            line-height: 1;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
